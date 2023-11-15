@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,700&family=Roboto+Condensed:wght@600&family=Tinos:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+
+        * {
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 400;
+            color: var(--tg-theme-text-color);
+            background: var(--tg-theme-bg-color);
+        }
+
+        #main {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        
+        #price {
+            position: relative;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #three {
+            left: 100px;
+        }
+
+        img {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            margin-top: 0px;
+            /* left: 45%; */
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        p {
+            width: 350px;
+            margin: 0 auto;
+        }
+
+        #image {
+            width: 18px;
+            height: 18px;
+            margin-left: 5px;
+            margin-right: 5px;
+            background: var(--tg-theme-secondary-bg-color);
+            margin-bottom: 10px;
+        }
+            
+        #button {
+            position: relative;
+            text-align: center;
+            box-sizing: content-box;
+            background-color:chartreuse;
+            padding-left: 2px;
+            padding-right: 2px;
+            margin-bottom: 10px;
+            left: 100px;
+        }
+
+        #btn12 {
+            font: bold;
+            border: none !important;
+            border-color: var(--tg-theme-secondary-bg-color);
+            border-radius: 1px;
+            background: var(--tg-theme-secondary-bg-color);
+            padding: 5px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 10px;
+            right: 40px;
+            top: 30px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 400;
+            color: var(--tg-theme-text-color);
+            background: var(--tg-theme-bg-color);
+        }
+
+        #btn6 {
+            font: 400;
+            border: none !important;
+            border-color: var(--tg-theme-secondary-bg-color);
+            border-radius: 1px;
+            background: var(--tg-theme-secondary-bg-color);
+            padding: 5px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 10px;
+            left: 95px;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 400;
+            color: var(--tg-theme-text-color);
+            background: var(--tg-theme-bg-color);
+        }
+
+        #btn3 {
+            border: none !important;
+            border-color: var(--tg-theme-secondary-bg-color);
+            border-radius: 1px;
+            background: var(--tg-theme-secondary-bg-color);
+            padding: 5px;
+            text-align: center;
+            position: relative;
+            margin-bottom: 10px;
+            top: 145px;
+            right: 100px;
+            font: 400;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: 400;
+            color: var(--tg-theme-text-color);
+            background: var(--tg-theme-bg-color);
+        }
+
+        #btn12:hover {
+            background: var(--tg-theme-bg-color);
+        }
+
+        #btn6:hover {
+            background: var(--tg-theme-bg-color);
+        }
+
+        #btn3:hover {
+            background: var(--tg-theme-bg-color);
+        }
+
+        #buy {
+            position: relative;
+            border: 0px;
+            border-radius: 5px;
+            margin-top: 0px;
+            height: 60px;
+            width: 200px;
+            font-size: 25px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 500ms ease;
+            color: var(--tg-theme-button-color);
+            background: var(--tg-theme-bg-color);
+            text-align: center;
+            margin-bottom: 0px;
+            top: 85px;
+        }
+
+        #gift {
+            position: relative;
+            left:100px;
+        }
+
+        #price1 {
+            margin-bottom: 0px;
+            box-sizing: content-box;
+        }
+
+        #button:hover {
+            background: var(--tg-theme-bg-color);
+        }
+
+        button:hover {
+            background: var(--tg-theme-secondary-bg-color);
+        }
+
+        .glow-on-hover {
+            width: 220px;
+            height: 50px;
+            border: none;
+            outline: none;
+            color: #fff;
+            background: #111;
+            cursor: pointer;
+            position: relative;
+            z-index: 0;
+            border-radius: 10px;
+        }
+
+        .glow-on-hover:before {
+            content: '';
+            background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+            position: absolute;
+            top: -2px;
+            left:-2px;
+            background-size: 400%;
+            z-index: -1;
+            filter: blur(5px);
+            width: calc(100% + 4px);
+            height: calc(100% + 4px);
+            animation: glowing 20s linear infinite;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+            border-radius: 10px;
+        }
+
+    .glow-on-hover:active {
+        color: #000
+    }
+
+    .glow-on-hover:active:after {
+        background: transparent;
+    }
+
+    .glow-on-hover:hover:before {
+        opacity: 1;
+    }
+
+    .glow-on-hover:after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #111;
+        left: 0;
+        top: 0;
+        border-radius: 10px;
+    }
+
+    @keyframes glowing {
+        0% { background-position: 0 0; }
+        50% { background-position: 400% 0; }
+        100% { background-position: 0 0; }
+    }
+        
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <h1>Online Shop</h1>
+        <button id="button" class="euro"><b>€</b></button>
+        <button id="button" class="rubl"><b>₽</b></button>
+        <button id="button" class="hrivnya"><b>₴</b></button>
+        <button id="button" class="dollar"><b>$</b></button>
+        <!-- <img id="image" src="https://cdn-icons-png.flaticon.com/512/126/126201.png">
+        <img id="image" src="https://cdn-icons-png.flaticon.com/512/38/38559.png">
+        <img id="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Hryvnia_symbol.svg/1200px-Hryvnia_symbol.svg.png">
+        <img id="image" src="https://e7.pngegg.com/pngimages/998/957/png-clipart-dollar-dollar-thumbnail.png"> -->
+        <button id="btn12"><div id="text1">TELEGRAM PREMIUM 12 MONTHS*</div>
+            <img id="twelve" src="https://i.ibb.co/Q8WRgcB/12mes-removebg-preview-2.png">
+            <div id="price" class="price12">15$</div></button>
+        <button id="btn6"><div id="text2">TELEGRAM PREMIUM 6 MONTHS*</div>
+            <img id="six" src="https://i.ibb.co/KyKB7pW/6mes-removebg-preview.png">
+            <div id="price" class="price6">8$</div></button>
+        <button id="btn3"><div id="text3">TELEGRAM PREMIUM 3 MONTHS*</div>
+            <img  src="https://i.ibb.co/V3Vc8Kv/3mes-removebg-preview.png">
+            <div id="price1" class="price3">4.5$</div></button>
+        <div id="gift">Gift-code*</div>
+        <button class='glow-on-hover' id="buy""buy">BUY</button>
+    </div>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
